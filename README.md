@@ -5,16 +5,16 @@
 - Uses cache regardless if endpoint unreachable.
 - Uses write-file-atomic for safe updates.
 
-```
+```javascript
 const Cache = require('cache-tokenlist');
 const assert = require('assert');
 
 const cache = new Cache('/path/to/cache');
+```
 
-//////////////
+### callback
+```javascript
 // callbacks
-//////////////
-
 // get
 cache.get('https://https://gateway.ipfs.io/ipns/tokens.uniswap.org', function(err, json) {
   assert.ok(!err);
@@ -31,11 +31,11 @@ cache.get('https://https://gateway.ipfs.io/ipns/tokens.uniswap.org', { force: tr
 cache.clear(function(err) {
   assert.ok(!err);
 });
+```
 
-//////////////
-// promise
-//////////////
-
+### promise
+```javascript
+// Promise
 // get
 const json = await cache.get('https://https://gateway.ipfs.io/ipns/tokens.uniswap.org')
 assert.ok(json.length > 0);
