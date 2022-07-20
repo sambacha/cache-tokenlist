@@ -14,7 +14,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "get-remote": "^0.6.1",
+    "get-remote": "^0.7.1",
     "mkpath": "^1.0.0",
     "rimraf": "^3.0.2",
     "write-file-atomic": "^4.0.1"
